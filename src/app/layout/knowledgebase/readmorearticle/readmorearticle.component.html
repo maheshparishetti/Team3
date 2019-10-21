@@ -1,0 +1,123 @@
+
+<!-- <div class="container-fluid"> -->
+<<<<<<< HEAD
+    <!-- <div class="row"> -->
+        <!-- <div class=""> -->
+            <div  class="d-flex justify-content-center" *ngIf="spinner;else elseblock" >
+                <div class="spinner-grow text-muted"></div>
+                <div class="spinner-grow text-primary"></div>
+                <div class="spinner-grow text-success"></div>
+                <div class="spinner-grow text-info"></div>
+                <div class="spinner-grow text-warning"></div>
+                <div class="spinner-grow text-danger"></div>
+                <div class="spinner-grow text-secondary"></div>
+                <div class="spinner-grow text-dark"></div>
+                <div class="spinner-grow text-light"></div>
+            </div>
+        <!-- </div> -->
+    <!-- </div> -->
+<!-- </div> -->
+<ng-template #elseblock>
+<div class="tab pane">
+        <div class="row">
+            <div class="col-md-12">
+   <div class="card hpanel" >
+       <div class="card-header bg-white">
+           <div class="img1">
+               <a class="img2">
+                   <img src="/assets/images/read_img.jpg" alt="profile-picture" class="avatar"
+                       style=" width:65px; border-radius:50%;float:left;">
+               </a>
+               <div class="read">
+                   <small class="read1">Created By:<span class="font-bold"></span> </small>
+                   <br>
+                   <small class="text-muted">{{arr?.createdDate}}</small>
+               </div>
+           </div>
+       </div>
+       <div class="card-body">
+           <div class="panel-body">
+               <strong>
+                   <h3 class=" title">{{arr?.articleName}}</h3>
+               </strong>
+
+               <div>
+                   <h2>{{arr?.previewContent}}</h2>
+
+               </div>
+               <div class="mob-px"  [innerHtml]="arr.content"></div>
+           </div>
+       </div>
+       <div class="container-fluid" >
+
+       </div>
+       <div class="card-footer text-muted">
+               <div style="float: right;"><button class="fa fa-pencil btn btn-info btn-xs"
+                       style="background-color: #3498db;padding: 3px" (click)="onEditArticle(arr)">Edit</button> </div>
+           </div>
+   </div>
+</div>
+</div>
+</div>
+=======
+<!-- <div class="row"> -->
+<!-- <div class=""> -->
+<div class="d-flex justify-content-center" *ngIf="!spinner;else elseblock">
+    <div class="spinner-grow text-muted"></div>
+    <div class="spinner-grow text-primary"></div>
+    <div class="spinner-grow text-success"></div>
+    <div class="spinner-grow text-info"></div>
+    <div class="spinner-grow text-warning"></div>
+    <div class="spinner-grow text-danger"></div>
+    <div class="spinner-grow text-secondary"></div>
+    <div class="spinner-grow text-dark"></div>
+    <div class="spinner-grow text-light"></div>
+</div>
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<ng-template #elseblock>
+    <div class="tab pane">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card hpanel">
+                    <div class="card-header bg-white">
+                        <div class="img1">
+                            <a class="img2">
+                                <img src="/assets/images/read_img.jpg" alt="profile-picture" class="avatar"
+                                    style=" width:65px; border-radius:50%;float:left;">
+                            </a>
+                            <div class="read">
+                                <small class="read1">Created By:<span class="font-bold"></span> </small>
+                                <br>
+                                <small class="text-muted">{{arr?.createdDate}}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="panel-body">
+                            <strong>
+                                <h3 class=" title">{{arr?.articleName}}</h3>
+                            </strong>
+
+                            <div>
+                                <h2>{{arr?.previewContent}}</h2>
+
+                            </div>
+                            <div class="mob-px" [innerHtml]="arr?.content"></div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+
+                    </div>
+                    <div class="card-footer text-muted">
+                        <div style="float: right;"><button class="fa fa-pencil btn btn-info btn-xs"
+                                style="background-color: #3498db;padding: 3px"
+                                (click)="onEditArticle(arr)">Edit</button> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+>>>>>>> 40b0bc49a4610fcc90da7fc4be7b0a5a558cd23f
+</ng-template>

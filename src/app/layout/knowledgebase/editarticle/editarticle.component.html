@@ -1,0 +1,89 @@
+<p-growl [(value)]='msg'></p-growl>
+<<<<<<< HEAD
+<nav class="navbar navbar-expand-lg">
+    <h4>Edit Article</h4>
+        <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto nav-pills">
+                        <li class="nav-item">
+                                <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active"><span
+                                        class='fa fa-group'></span>Dash board</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" [routerLink]="['/knowledge-base']" routerLinkActive="router-link-active"><span
+                                        class='fa fa-list'></span>My Articles</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" [routerLink]="['/knowledge-base/add']" routerLinkActive="active"><span
+                                        class='fa fa-plus-circle'></span>Add Article</a>
+                            </li>
+                </ul>
+        </div>
+</nav>
+
+<div class="main-content">
+        <div style='background-color: #f1f3f6;min-height: 907px' class="container-fluid">
+
+=======
+<!-- navbar-menu -->
+<nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse">
+        <a class="navbar-brand">Edit Article</a>
+        <ul class="navbar-nav ml-auto nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active"
+                    [routerLinkActiveOptions]={exact:true}><span class='fa fa-group'></span>My Dash board</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/knowledge-base']" routerLinkActive="active"
+                    [routerLinkActiveOptions]={exact:true}><span class='fa fa-list'></span>My Articles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/knowledge-base/add']" routerLinkActive="active"
+                    [routerLinkActiveOptions]={exact:true}><span class='fa fa-plus-circle'></span>Add Article</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--navbar-menu end-->
+
+<div style='background-color: #f1f3f6;min-height: 907px'>
+    <div class="container pull-left">
+>>>>>>> 40b0bc49a4610fcc90da7fc4be7b0a5a558cd23f
+        <form [formGroup]="editForm" (ngSubmit)="onEditArticle()">
+            <div class="container">
+                <br />
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td>Article Name<span style="color:red">*</span></td>
+                            <td><input type="text" class="form-control col-6 col-sm-8 col-md-4 col-lg-6"
+                                    formControlName="ArticleName"></td>
+                        </tr>
+                        <tr>
+                            <td>Category</td>
+                            <td>
+                                <select formControlName="CategoryId"
+                                    class="custom-select col-6 col-sm-8 col-md-4 col-lg-6">
+                                    <option style="font-size: 12px;">Choose your category</option>
+                                    <option *ngFor="let item of arr" style="font-size:12px;" [value]="item.categoryId">
+                                        {{item.categoryName}}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ejs-richtexteditor id='iframeRTE' formControlName="Content" [iframeSettings]='iframe'>
+                </ejs-richtexteditor>
+                <br>
+            </div>
+            <div class="container">
+                <button type="submit" class="btn btn-secondary">Save</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-warning" (click)='onClickClose()'>Close</button> <br />
+            </div>
+            <br />
+        </form>
+    </div>
+</div>
